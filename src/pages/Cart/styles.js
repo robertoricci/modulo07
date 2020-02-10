@@ -77,20 +77,19 @@ export const ProductTable = styled.table`
     background: none;
     border: 0;
     padding: 6px;
+    cursor: pointer;
   }
 `;
 
 export const Total = styled.div`
   display: flex;
-  align-items: baseline;
-
-  span {
+  align-items: baseline span {
     color: #999;
     font-weight: bold;
   }
 
   strong {
-    font-size: 25px;
+    font-size: 28px;
     margin-left: 5px;
   }
 `;

@@ -7,8 +7,7 @@ import { MdShoppingBasket } from 'react-icons/md';
 
 // import { Container } from './styles';
 
-function Header({ cart }) {
-  console.log(cart);
+function Header({ cartSize }) {
   return (
     <Container>
       <Link to="/">
@@ -17,7 +16,7 @@ function Header({ cart }) {
       <Cart to="/cart">
         <div>
           <strong> Meu carrinho</strong>
-          <span> 3 itens</span>
+          <span> {cartSize} itens</span>
         </div>
         <MdShoppingBasket size={36} color="#FFF" />
       </Cart>
@@ -26,5 +25,5 @@ function Header({ cart }) {
 }
 
 export default connect(state => ({
-  cart: state.cart,
+  cartSize: state.cart.length,
 }))(Header);

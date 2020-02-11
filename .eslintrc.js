@@ -1,25 +1,28 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
   },
-  extends: ["prettier", "prettier/react", "airbnb"],
+  extends: ['prettier', 'prettier/react', 'airbnb'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
-  plugins: ["react", "prettier"],
+  plugins: ['react', 'prettier', 'react-hooks'],
   rules: {
-    "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["warn", { extension: [".jsx", ".js"] }],
-    "import/prefer-default-export": "off"
-  }
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': ['warn', { extension: ['.jsx', '.js'] }],
+    'import/prefer-default-export': 'off',
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
 };
